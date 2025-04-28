@@ -1,15 +1,14 @@
-// lib/slices/imageOverlaySlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { nanoid } from "nanoid";
 
 export interface ImageOverlay {
   id: string;
-  src: string;      // object URL
-  x: number;        // % position
+  src: string;      
+  x: number;       
   y: number;
-  width: number;    // % of video width
-  height: number;   // % of video height
-  opacity: number;  // 0–1
+  width: number;   
+  height: number;  
+  opacity: number;  
 }
 
 interface ImageOverlayState {

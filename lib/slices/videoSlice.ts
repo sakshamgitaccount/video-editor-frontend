@@ -14,16 +14,13 @@ const videoSlice = createSlice({
   name: "video",
   initialState,
   reducers: {
-    // call this when a new file is dropped to reset progress & thumbnail
     startUpload(state) {
       state.uploadProgress = 0;
       state.thumbnailUrl = "";
     },
-    // update the simulated upload %
     setUploadProgress(state, action: PayloadAction<number>) {
       state.uploadProgress = action.payload;
     },
-    // store the preview URL once “uploaded”
     setThumbnailUrl(state, action: PayloadAction<string>) {
       state.thumbnailUrl = action.payload;
     },

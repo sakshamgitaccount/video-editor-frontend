@@ -1,12 +1,11 @@
-// lib/slices/subtitleSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { nanoid } from "nanoid";
 
 export interface SubtitleBlock {
   id: string;
   text: string;
-  start: number; // seconds
-  end: number;   // seconds
+  start: number; 
+  end: number;  
   fontSize: number;
   color: string;
   position: "bottom" | "top" | "center";

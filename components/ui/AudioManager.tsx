@@ -10,7 +10,7 @@ export default function AudioManager() {
   const segments = useSelector((s: RootState) => s.audio.segments);
 
   const handleAddBGM = () => {
-    dispatch(addClip("BGM", 0, 30)); // 30s of stubbed background music
+    dispatch(addClip("BGM", 0, 30)); 
   };
 
   return (
@@ -28,7 +28,6 @@ export default function AudioManager() {
               key={seg.id}
               className="flex items-center space-x-4 p-2 bg-gray-50 rounded"
             >
-              {/* Mock waveform as a gray bar */}
               <div className="flex-1 h-6 bg-gray-200 rounded overflow-hidden">
                 <div
                   className={`h-full ${

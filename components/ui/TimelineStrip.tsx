@@ -61,7 +61,7 @@ export default function TimelineStrip() {
   const scenes = useSelector((s: RootState) => s.timeline.scenes);
   const handleAdd = () => {
     const label = `Scene ${scenes.length + 1}`;
-    dispatch(addScene(label, 5)); // mock 5s duration
+    dispatch(addScene(label, 5));
   };
 
   return (

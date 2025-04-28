@@ -15,7 +15,6 @@ export default function ImageOverlay() {
   const dispatch = useDispatch<AppDispatch>();
   const items = useSelector((s: RootState) => s.imageOverlay.items);
 
-  // handle image drop
   const onDrop = useCallback(
     (files: File[]) => {
       const file = files[0];
@@ -55,9 +54,7 @@ export default function ImageOverlay() {
         {items.map(img => (
           <div key={img.id} className="space-y-2 p-2 bg-gray-50 rounded">
             <img src={img.src} className="max-h-32 mb-2" />
-
             <div className="flex flex-wrap gap-2 text-sm">
-              {/** Position X */}
               <label className="flex items-center">
                 X%:
                 <input
@@ -73,8 +70,6 @@ export default function ImageOverlay() {
                   className="ml-1 w-16 border rounded p-1"
                 />
               </label>
-
-              {/** Position Y */}
               <label className="flex items-center">
                 Y%:
                 <input
@@ -90,8 +85,6 @@ export default function ImageOverlay() {
                   className="ml-1 w-16 border rounded p-1"
                 />
               </label>
-
-              {/** Width */}
               <label className="flex items-center">
                 W%:
                 <input
@@ -107,8 +100,6 @@ export default function ImageOverlay() {
                   className="ml-1 w-16 border rounded p-1"
                 />
               </label>
-
-              {/** Height */}
               <label className="flex items-center">
                 H%:
                 <input
@@ -124,8 +115,6 @@ export default function ImageOverlay() {
                   className="ml-1 w-16 border rounded p-1"
                 />
               </label>
-
-              {/** Opacity */}
               <label className="flex items-center">
                 Opacity:
                 <input

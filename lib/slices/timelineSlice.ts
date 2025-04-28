@@ -1,11 +1,10 @@
-// lib/slices/timelineSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { nanoid } from "nanoid";
 
 export interface Scene {
   id: string;
-  label: string;      // e.g. “Scene 1”
-  duration: number;   // in seconds
+  label: string;
+  duration: number;   
 }
 
 interface TimelineState {
@@ -13,7 +12,7 @@ interface TimelineState {
 }
 
 const initialState: TimelineState = {
-  scenes: [], // start empty
+  scenes: [], 
 };
 
 const timelineSlice = createSlice({

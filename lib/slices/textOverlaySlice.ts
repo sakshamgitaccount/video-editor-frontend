@@ -6,8 +6,8 @@ export interface TextOverlay {
   text: string;
   fontSize: number;
   color: string;
-  x: number;       // percentage [0–100]
-  y: number;       // percentage [0–100]
+  x: number;    
+  y: number;       
 }
 
 interface TextOverlayState {

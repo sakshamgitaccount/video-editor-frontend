@@ -1,4 +1,3 @@
-// components/PreviewPlayer.tsx
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -14,7 +13,6 @@ export default function PreviewPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentTime, setCurrentTime] = useState(0);
 
-  // track time for subtitle timing
   useEffect(() => {
     const vid = videoRef.current;
     if (!vid) return;
@@ -35,8 +33,6 @@ export default function PreviewPlayer() {
         controls
         className="w-full"
       />
-
-      {/* Subtitles */}
       {subtitles.map(sb =>
         currentTime >= sb.start && currentTime <= sb.end ? (
           <div
@@ -54,7 +50,6 @@ export default function PreviewPlayer() {
         ) : null
       )}
 
-      {/* Text Overlays */}
       {textOverlays.map(to => (
         <div
           key={to.id}
@@ -71,7 +66,6 @@ export default function PreviewPlayer() {
         </div>
       ))}
 
-      {/* Image Overlays */}
       {imageOverlays.map(img => (
         <img
           key={img.id}

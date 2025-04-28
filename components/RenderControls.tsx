@@ -1,4 +1,3 @@
-// components/RenderControls.tsx
 "use client";
 
 import { useState } from "react";
@@ -12,10 +11,7 @@ export default function RenderControls() {
     setIsRendering(true);
     setDownloadUrl("");
 
-    // simulate a 3-second render
     setTimeout(() => {
-      // in a real app you'd fetch the rendered blob here
-      // for demo, we’ll just reuse the original video URL
       const fakeUrl = URL.createObjectURL(new Blob([]));
       setDownloadUrl(fakeUrl);
       setIsRendering(false);

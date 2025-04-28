@@ -3,9 +3,9 @@ import { nanoid } from "nanoid";
 
 export interface AudioSegment {
   id: string;
-  label: string;       // e.g. “Clip 1” or “BGM”
-  start: number;       // seconds
-  duration: number;    // seconds
+  label: string;       
+  start: number;     
+  duration: number;   
   muted: boolean;
 }
 
@@ -14,7 +14,7 @@ interface AudioState {
 }
 
 const initialState: AudioState = {
-  segments: [],    // empty at start
+  segments: [],    
 };
 
 const audioSlice = createSlice({

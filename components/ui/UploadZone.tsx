@@ -20,18 +20,13 @@ export default function UploadZone() {
     (files: File[]) => {
       const file = files[0];
       if (!file) return;
-
-      // reset state
       dispatch(startUpload());
-
-      // simulate upload
       let prog = 0;
       const iv = setInterval(() => {
         prog += 10;
         dispatch(setUploadProgress(Math.min(prog, 100)));
         if (prog >= 100) {
           clearInterval(iv);
-          // generate a preview URL (this URL is serializable as a string)
           const url = URL.createObjectURL(file);
           dispatch(setThumbnailUrl(url));
         }
