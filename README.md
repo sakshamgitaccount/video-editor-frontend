@@ -17,6 +17,10 @@ This project simulates video upload, scene trimming, audio management, subtitles
 - **Render & Download** – click “Render Video” to simulate a 3-second render, then download your edited clip via a generated link.
 
 ---
+## 📹 Demo
+
+Watch the 3–5 minute walkthrough here:  
+https://drive.google.com/file/d/1sbUayvaV0tThS8hKd3doXF4VJl59zrED/view?usp=sharing
 
 ## 💻 Getting Started
 
